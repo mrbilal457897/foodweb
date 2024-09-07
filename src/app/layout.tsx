@@ -1,8 +1,41 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
+import { Roboto , Space_Grotesk , Pacifico , Caveat , Rubik_Glitch_Pop ,
+   Zhi_Mang_Xing , Della_Respira , Cinzel} from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto_init= Roboto({ subsets: ["latin"] 
+  ,weight: ['100', '300', '400' , '500', '700' ,'900'],
+  variable: '--font-roboto',
+});
+const space_grotesk= Space_Grotesk({ subsets: ["latin"] 
+  ,weight: ['300', '400' , '500', '700' ],
+  variable: '--font-space',
+});
+const pacifico_init= Pacifico({ subsets: ["latin"] 
+  ,weight: ['400' ],
+  variable: '--font-pacifico',
+});
+const caveat_init= Caveat({ subsets: ["latin"] 
+  ,weight: ['400', '500', '600', '700' ],
+  variable: '--font-caveat',
+});
+const rubik_init= Rubik_Glitch_Pop({ subsets: ["latin"] 
+  ,weight: ['400' ],
+  variable: '--font-rubik',
+});
+const zhi_init= Zhi_Mang_Xing({ subsets: ["latin"] 
+  ,weight: ['400' ],
+  variable: '--font-zhi',
+});
+const della_init= Della_Respira({ subsets: ["latin"] 
+  ,weight: ['400' ],
+  variable: '--font-della',
+});
+const cinzel_init= Cinzel({ subsets: ["latin"] 
+  ,weight: ['400' ],
+  variable: '--font-cinzel',
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +49,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${roboto_init.variable} ${space_grotesk.variable} ${pacifico_init.variable}
+        ${caveat_init.variable} ${rubik_init.variable}  ${zhi_init.variable} ${della_init.variable}
+        ${cinzel_init.variable}`}>
+          
+          {children}
+          
+          </body>
     </html>
   );
 }
