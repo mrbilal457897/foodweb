@@ -1,12 +1,22 @@
 import React from 'react'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
+import { Menu } from 'lucide-react'
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+
 
 
 
 function Navbar() {
   return (
-    <div className='roboto py-3 drop-shadow-2xl bg-transparent flex justify-between items-center sticky z-50 top-0'>
+    <div className=' roboto py-3 drop-shadow-2xl bg-transparent flex justify-between items-center sticky z-50 top-0'>
         {/*Left Side */}
         <div className='flex ml-40  '>
             <h1 className='font-bold text-2xl  '>BILAL <span className='text-[#d4af37] '>FOOD</span></h1>
@@ -25,7 +35,26 @@ function Navbar() {
             </ul>   
            
          </div>
-         <Button className='mr-6 rounded-3xl bg-[#d4af37] text-white'>Book a Table</Button>
+         <Sheet >
+  <SheetTrigger className='text-white  lg:hidden'><Menu /></SheetTrigger>
+  <SheetContent className='grid  grid-cols-1  items-center text-white'>
+  <ul className=' '>
+                <Link className="flex justify-center text-[25px]  hover:text-[#d4af37] font-semibold " href="#hero"><li>Home</li></Link>
+                <Link className="flex justify-center text-[25px]  hover:text-[#d4af37] font-semibold" href={"#about"}><li>About</li></Link>
+                <Link className="flex justify-center text-[25px]  hover:text-[#d4af37] font-semibold" href="#menu"><li>Menu</li></Link>
+                <Link className="flex justify-center text-[25px]  hover:text-[#d4af37] font-semibold" href="#shop"><li>Shop</li></Link>
+                <Link className="flex justify-center text-[25px]  hover:text-[#d4af37] font-semibold" href={'#contact'}><li>Contact</li></Link>
+                
+                
+            </ul> 
+    <SheetHeader>
+      
+    </SheetHeader>
+  </SheetContent>
+</Sheet>
+
+         
+         <Button className=' mr-6 rounded-3xl bg-[#d4af37] text-white'>Book a Table</Button>
     </div>
   )
 }
