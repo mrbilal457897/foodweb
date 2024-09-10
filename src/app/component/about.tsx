@@ -35,7 +35,8 @@ function About() {
           width={400}
           height={400}
           alt="burger"
-          className="h-[520px] w-[510px] drop-shadow-3xl"
+          className="lg:h-[520px] lg:w-[510px] md:h-[420px] md:w-[410px] sm:h-[320px] sm:w-[220px] 
+          h-[400px] w-[320px]  drop-shadow-3xl"
         />
       </motion.div>
       {/*Right Side */}
@@ -45,11 +46,12 @@ function About() {
         variants={Scroll}
         className=" justify-between   ">
         <motion.h1
-          className="text-[40px] font-semibold mt-16 mr-6 text-white">Lets some talk About <br />BILAL <span className="text-[#d4af37]">FOOD</span></motion.h1>
+          className="text-[26px] sm:text-[32px] md:text-[42px] lg:text-[52px] font-semibold mt-16 mr-6 text-white">Lets some talk About <br />BILAL <span className="text-[#d4af37]">FOOD</span></motion.h1>
 
         <motion.p
           variants={Scroll}
-          className="w-[560px] mt-2 p-10 text-gray-400">
+          className="lg:w-[560px] md:w-[540px] sm:w-[400px] w-[310px] 
+        text-[12px] lg:text-base md:text-[14px] mt-2 p-10 text-gray-400">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and

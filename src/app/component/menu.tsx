@@ -30,9 +30,17 @@ function Menu() {
             variants={Scroll}
         >
 
-            <motion.h1 className='text-[40px] font-semibold text-white text-center'>Your <span
+            <motion.h1
+            initial={{ opacity: 0, x: 0 }}
+            whileInView={{ opacity: 1, x: 80 }}
+            transition={{ duration: 1 }}
+             className='text-[32px] sm:text-[42px] md:text-[52px] lg:text-[62px] font-semibold mr-36 text-white text-center'>Your <span
                 className='text-[#d4af37]'> Menu</span></motion.h1>
-            <motion.p className='w-[520px] mx-auto leading-relaxed text-base text-gray-400'>Tasty, delicious, and has me craving more on the first bite. to Juicy, mouthwatering, tasty,
+            <motion.p
+            initial={{ opacity: 0, x: 0 }}
+            whileInView={{ opacity: 1, x: 80 }}
+            transition={{ duration: 0.8 }}
+             className='text-center lg:w-[560px] md:w-[540px] sm:w-[400px] w-[310px] leading-relaxed text-[12px] lg:text-base md:text-[14px] text-gray-400'>Tasty, delicious, and has me craving more on the first bite. to Juicy, mouthwatering, tasty,
                 and everything you had ever want to savor.</motion.p>
             <motion.div className='grid grid-cols-3 justify-center items-center h-screen px-2 py-6 ml-32'>
 
@@ -124,11 +132,14 @@ function Menu() {
                         className='absolute h-full w-full '
 
                     />
-                    <div className='px-2 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-60'>
+                    <motion.div 
+                    
+                    className='px-2 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-60'>
 
-                        <motion.h1 className='title-font tracking-widest relative text-indigo-700 text-base font-bold hover:opacity-40 focus:bg-slate-100'>Chilli Cheese Burger</motion.h1>
+                        <motion.h1
+                         className='title-font tracking-widest relative text-indigo-700 text-base font-bold hover:opacity-40 focus:bg-slate-100'>Chilli Cheese Burger</motion.h1>
                         <motion.p className='title-font tracking-widest relative text-black text-[11px] font-bold hover:opacity-40 focus:bg-slate-100'>Our Chilli Cheese Double burger is a spicy hot favourite. It features two 100% pure beef patties topped with nacho cheese sauce, spicy hot sauce, jalapeño pieces and a slice of cheese on a freshly toasted bun.</motion.p>
-                    </div>
+                    </motion.div>
                 </motion.div>
 
                 <motion.div className=' flex relative bg-slate-600 h-[220px] w-[240px] '>
